@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: unset;
+  text-decoration: unset;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background: unset;
+  border: unset;
+  outline: unset;
+  color: unset;
+  cursor: unset;
+}
+
+img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.navbar {
+  background: black;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  z-index: 10;
+}
+
+.navbar .logo a {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar li {
+  list-style: none;
+}
+
+.container {
+  padding: 0 50px;
+  max-width: 1440px;
+  margin: 100px auto;
+}
+
+.cards {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px 30px;
+}
+
+.card {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  text-align: center;
+  border: 1px solid rgb(248, 247, 247);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.card img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: -50px;
+}
+
+.card .author {
+  font-weight: bold;
+}
+
+.card .content {
+  margin-top: 10px;
+  line-height: 1.5rem;
+}
+
+footer {
+  margin-top: 100px;
+  padding: 20px 50px;
+  background-color: black;
+  color: white;
+}
+
+footer .logo {
+  font-size: 1.5rem;
+}
+
+footer .note {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
