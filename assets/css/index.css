@@ -63,35 +63,42 @@ body {
   list-style: none;
 }
 
+.outer {
+  background-color: black;
+}
+
 .header {
-  width: 100%;
-  min-height: 100vh;
-  background: black;
+  max-width: 1220px;
+  margin: 60px auto 0;
+  padding: 0 30px;
+  height: calc(100vh - 60px);
+  background-color: black;
   color: white;
-  padding-top: 70px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
+  column-gap: 30px;
+  overflow: hidden;
 }
 
 .header .content {
-  margin-left: 50px;
+  flex: 0 0 content;
+  margin-top: 40px;
 }
 
-.header h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
+.header .image {
+  max-height: 100%;
+  flex: 5 0 300px;
+  display: flex;
 }
 
 .header img {
-  align-self: flex-end;
-  width: 500px;
-  max-width: 900px;
-  flex-grow: 1;
-  flex-shrink: 0;
-  max-height: 100%;
   object-fit: contain;
+}
+
+.header h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
 }
 
 .header button {
