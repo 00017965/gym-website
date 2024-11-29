@@ -47,6 +47,8 @@ img {
 .navbar .logo a {
   font-size: 1.3rem;
   font-weight: 600;
+  color: white;
+  text-decoration: none;
 }
 
 .navbar ul {
@@ -58,6 +60,60 @@ img {
 
 .navbar li {
   list-style: none;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+@media screen and (max-width: 640px) {
+  .navbar {
+    padding: 20px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 60px;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar li {
+    margin: 15px 0;
+  }
 }
 
 .container {
